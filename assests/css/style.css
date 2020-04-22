@@ -29,10 +29,13 @@ text-align: center;
     text-align: center;
 }
 
-.card2{    
-    height: 100%;
-}
 
 .row{
     padding-top: 1.5rem;
 }
+
+@media screen and (max-width: 995px) {
+    .card2{    
+        height: 100%;
+    }
+  }

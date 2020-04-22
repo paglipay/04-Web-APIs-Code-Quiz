@@ -2,23 +2,37 @@ ul {
     list-style-type: none;
 }
 
-button {
+input {
     margin: 10px;
     width: 300px;
 }
 
-body {
+button {
+    margin: 10px;
+    width: auto;
+}
+
+.container {
     padding-top: 5rem;
   }
+
   .starter-template {
-    padding: 3rem 1.5rem;
+/* padding: 3rem 1.5rem; */
+text-align: center;
+}
+
+#qaSection{
+    min-height:400px;
+}
+
+.q_and_a{
     text-align: center;
-  }
+}
 
-  #qaSection{
-      height:400px;
-  }
+.card2{    
+    height: 100%;
+}
 
-  .q_and_a{
-      text-align: center;
-  }
+.row{
+    padding-top: 1rem;
+}

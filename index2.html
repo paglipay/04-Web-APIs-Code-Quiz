@@ -8,18 +8,14 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link id="dark_css" rel="stylesheet" href="./assests/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assests/css/style.css">
+<link id="dark_css" rel="stylesheet" href="./assests/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assests/css/style.css">
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">04-Web-APIs-Code-Quiz:</a>
-        
-        <button id="darkBtn" class="btn btn-primary">Light</button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
+        <button id="darkBtn" class="btn btn-primary" style="width:100px;">Light</button>
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 
@@ -29,38 +25,41 @@
     <main role="main" class="container">
         <div class="row ">
             <div class="col-md-3 card">
-
                 <div class="card-header">
                     Featured
                 </div>
-                <section>
-                    <h4>View Highest Scores:</h4>
+                <section id="scoreSection" class="card-body">
+                    <h4 class="card-title">View Highest Scores:</h4>
                     <p>100</p>
                 </section>
             </div>
             <div class="col-md-6 card">
-                <section>
-                    <div class="title_bar">
-                        <h1>04-Web-APIs-Code-Quiz:</h1>
-                        <p>GIVEN I am taking a code quiz<br>
-                            WHEN I click the start button<br>
-                            THEN a timer starts and I am presented with a question<br>
-                            WHEN I answer a question<br>
-                            THEN I am presented with another question<br>
-                            WHEN I answer a question incorrectly<br>
-                            THEN time is subtracted from the clock<br>
-                            WHEN all questions are answered or the timer reaches 0<br>
-                            THEN the game is over<br>
-                            WHEN the game is over<br>
-                            THEN I can save my initials and score<br>
-                        </p>
-                    </div>
-                </section>
+                <div class="card-header">
+                    Instructions:
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title">04-Web-APIs-Code-Quiz:</h1>
+                    <p class="card-text">GIVEN I am taking a code quiz<br>
+                        WHEN I click the start button<br>
+                        THEN a timer starts and I am presented with a question<br>
+                        WHEN I answer a question<br>
+                        THEN I am presented with another question<br>
+                        WHEN I answer a question incorrectly<br>
+                        THEN time is subtracted from the clock<br>
+                        WHEN all questions are answered or the timer reaches 0<br>
+                        THEN the game is over<br>
+                        WHEN the game is over<br>
+                        THEN I can save my initials and score</p>
+                </div>
             </div>
+
             <div class="col-md-3 card">
-                <section>
-                    <h4>Time:</h4>
-                    <h1>
+                <div class="card-header">
+                    Time:
+                </div>
+                <section class="card-body">
+                    <h4 class="card-title">Time:</h4>
+                    <h1 class="card-body">
                         <div id="minutes">00</div>
                         <div id="seconds">00</div>
                     </h1>

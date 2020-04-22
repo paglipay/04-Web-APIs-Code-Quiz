@@ -153,9 +153,14 @@ function renderEnd() {
     qaSection.appendChild(hrElem);
 
     var qheader = document.createElement("h1");
-    qheader.textContent = "Game Over, Man! Game Over!";
-
+    qheader.textContent = "All Done!";
     qaSection.appendChild(qheader);
+
+    var qheader = document.createElement("h5");
+    qheader.textContent = "Your final score is...";
+    qaSection.appendChild(qheader);
+
+
     var button = document.createElement("button");
 
     button.setAttribute("class", "btn btn-primary");

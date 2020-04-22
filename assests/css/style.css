@@ -1,0 +1,24 @@
+ul {
+    list-style-type: none;
+}
+
+button {
+    margin: 10px;
+    width: 300px;
+}
+
+body {
+    padding-top: 5rem;
+  }
+  .starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  #qaSection{
+      height:400px;
+  }
+
+  .q_and_a{
+      text-align: center;
+  }

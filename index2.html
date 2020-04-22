@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link id="dark_css" rel="stylesheet" href="./assests/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assests/css/style.css">
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">04-Web-APIs-Code-Quiz:</a>
+        
+        <button id="darkBtn" class="btn btn-primary">Light</button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+        </div>
+    </nav>
+
+    <main role="main" class="container">
+        <div class="row ">
+            <div class="col-md-3 card">
+
+                <div class="card-header">
+                    Featured
+                </div>
+                <section>
+                    <h4>View Highest Scores:</h4>
+                    <p>100</p>
+                </section>
+            </div>
+            <div class="col-md-6 card">
+                <section>
+                    <div class="title_bar">
+                        <h1>04-Web-APIs-Code-Quiz:</h1>
+                        <p>GIVEN I am taking a code quiz<br>
+                            WHEN I click the start button<br>
+                            THEN a timer starts and I am presented with a question<br>
+                            WHEN I answer a question<br>
+                            THEN I am presented with another question<br>
+                            WHEN I answer a question incorrectly<br>
+                            THEN time is subtracted from the clock<br>
+                            WHEN all questions are answered or the timer reaches 0<br>
+                            THEN the game is over<br>
+                            WHEN the game is over<br>
+                            THEN I can save my initials and score<br>
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-3 card">
+                <section>
+                    <h4>Time:</h4>
+                    <h1>
+                        <div id="minutes">00</div>
+                        <div id="seconds">00</div>
+                    </h1>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 card">
+                <section>
+                    <div id="qaSection" class="q_and_a">
+                        <form id="question-form" method="POST">
+                            <h1>Questions Here:</h1>
+                            <p>Answers Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum quae optio
+                                asperiores, temporibus non hic odio excepturi facilis molestiae sed blanditiis sit rem
+                                dolore aperiam modi deserunt dicta eum ea.</p>
+                        </form>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main><!-- /.container -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./assests/js/script.js"></script>
+</body>
+
+</html>

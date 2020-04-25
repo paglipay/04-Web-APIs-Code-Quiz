@@ -72,14 +72,13 @@ $(document).ready(function () {
         // If Score were retrieved from localStorage, update the Score array to it
         if (storedScore !== null) {
             highscores = storedScore;
+            // Render Score to the DOM
             renderScore();
         }
-        // Render Score to the DOM
+
+        
         renderStart();
     }
-
-
-
 
     function renderScore() {
 
@@ -93,7 +92,7 @@ $(document).ready(function () {
 
         // Find a <table> element with id="myTable":
         var tableScoreDiv = document.getElementById("table_score_div");
-
+        tableScoreDiv.innerHTML = "";
         var table = document.createElement("table");
         table.classList.add("table");
         var header = table.createTHead();

@@ -92,11 +92,20 @@ $(document).ready(function () {
         }
 
         // Find a <table> element with id="myTable":
-        var table = document.getElementById("scoreTable");
-        console.log(table.length)
-        for (var r = 1; r < table.rows.length; r++){
-            table.deleteRow(r);
-        }
+        var tableScoreDiv = document.getElementById("table_score_div");
+
+        var table = document.createElement("table");
+        table.classList.add("table");
+        var header = table.createTHead();
+        
+        var row = table.insertRow(header);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        
+        cell1.innerHTML = "#";
+        cell2.innerHTML = "Player";
+        cell3.innerHTML = "Score";
 
         for (var s = 0; s < highscores_length; s++) {
             var userScore = highscores[s];
@@ -120,7 +129,7 @@ $(document).ready(function () {
             //li.appendChild(pElem);
             //ul.appendChild(li);
         }
-        //scoreSection.appendChild(ul);
+        tableScoreDiv.appendChild(table);
 
     }
 

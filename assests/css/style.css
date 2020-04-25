@@ -25,6 +25,10 @@ text-align: center;
     min-height:400px;
 }
 
+#save_form{
+    min-height:400px;
+}
+
 .q_and_a{
     text-align: center;
 }
@@ -34,8 +38,11 @@ text-align: center;
     padding-top: 1.5rem;
 }
 
-@media screen and (max-width: 995px) {
+.hide {
+    display: none;
+  }
+/* @media screen and (max-width: 995px) {
     .card2{    
         height: 100%;
     }
-  }
+  } */

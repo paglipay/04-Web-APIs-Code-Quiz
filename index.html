@@ -8,7 +8,7 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link id="dark_css" rel="stylesheet" href="./assests/css/bootstrap.min.css">
+<link id="dark_css" rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.css">
 <link rel="stylesheet" href="./assests/css/style.css">
 
 <body>
@@ -80,54 +80,47 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="card  ml-lg-3  mr-lg-3">
-                    <div class="card-header">
-                        Featured
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">
-                            <div id="qaSection" class="q_and_a">
-                                <form id="question-form" method="POST">
-                                    <h1>Questions Here:</h1>
-                                    <p>Answers Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
-                                        quae optio
-                                        asperiores, temporibus non hic odio excepturi facilis molestiae sed
-                                        blanditiis sit rem
-                                        dolore aperiam modi deserunt dicta eum ea.</p>
-                                </form>
-                            </div>
-                        </p>
+                <div id="qa_card">
+                    <div class="card  ml-lg-3  mr-lg-3">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">
+                                <div id="qaSection" class="q_and_a">
+                                    <form id="question-form" method="POST">
+                                        <h1>Questions Here:</h1>
+                                        <p>Answers Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+                                            quae optio
+                                            asperiores, temporibus non hic odio excepturi facilis molestiae sed
+                                            blanditiis sit rem
+                                            dolore aperiam modi deserunt dicta eum ea.</p>
+                                    </form>
+                                </div>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-3"></div>
             <div class="col-lg-6">
-                <div class="card  ml-lg-3">
-                    <div class="card-header">
-                        Featured
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <form style="max-width: 300px;">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your
-                                    email with
-                                    anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="Password">
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width: auto;">Submit</button>
-                        </form>
+                <div id="save_form" class="hide">
+                    <div class="card  mb-lg-3">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Save Player Score</h5>
+                            <form style="max-width: 300px;">
+                                <div class="form-group">
+                                    <label for="save_player_score_input">Player Initials</label>
+                                    <input type="text" class="form-control" id="save_player_score_input"
+                                        aria-describedby="playerHelp" placeholder="Enter Initials">
+                                </div>
+                                <button id="save_player_score_button" type="submit" class="btn btn-primary" style="width: auto;">Submit</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

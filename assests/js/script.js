@@ -12,6 +12,7 @@ $(document).ready(function () {
     var darkBol = true;
     var highscores = [];
     var lastAnswerStatus = "";
+    var userScore = 0;
 
     var darkBtn = document.getElementById("darkBtn");
     var darkCss = document.getElementById("dark_css");
@@ -24,6 +25,7 @@ $(document).ready(function () {
         timerStart = false;
         gameOn = false;
         totalSeconds = 0;
+        var userScore = 0;
         renderEnd();
         clearInterval(timer);
     }
@@ -75,8 +77,6 @@ $(document).ready(function () {
             // Render Score to the DOM
             renderScore();
         }
-
-        
         renderStart();
     }
 
@@ -96,12 +96,12 @@ $(document).ready(function () {
         var table = document.createElement("table");
         table.classList.add("table");
         var header = table.createTHead();
-        
+
         var row = table.insertRow(header);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
-        
+
         cell1.innerHTML = "#";
         cell2.innerHTML = "Player";
         cell3.innerHTML = "Score";
@@ -159,7 +159,8 @@ $(document).ready(function () {
 
 
     function renderEnd() {
-        setTime();
+        
+        //setTime();
         timerStart = false;
         qaSection.innerHTML = "";
 
@@ -171,7 +172,7 @@ $(document).ready(function () {
         qaSection.appendChild(qheader);
 
         var qheader = document.createElement("h5");
-        qheader.textContent = "Your final score is...";
+        qheader.textContent = "Your final score is..." + userScore + ' points!';
         qaSection.appendChild(qheader);
 
         var button = document.createElement("button");
@@ -191,6 +192,17 @@ $(document).ready(function () {
                 saveFormElem.classList.add("hide");
             }
         });
+
+        qaSection.appendChild(button);
+
+        var hrElem = document.createElement("hr");
+        qaSection.appendChild(hrElem);
+
+        var button = document.createElement("button");
+
+        button.setAttribute("class", "btn btn-primary");
+        button.setAttribute("id", "begin_button");
+        button.textContent = "Try Again?";
 
         qaSection.appendChild(button);
 
@@ -243,11 +255,6 @@ $(document).ready(function () {
         qaSection.appendChild(divElem);
     }
 
-    function storeScore() {
-        // Stringify and set "Score" key in localStorage to Score array
-        localStorage.setItem("Score", JSON.stringify(Score));
-    }
-
     //If it isn't "undefined" and it isn't "null", then it exists.
     if (typeof (darkBtn) != 'undefined' && darkBtn != null) {
         darkBtn.addEventListener("click", function (event) {
@@ -283,6 +290,7 @@ $(document).ready(function () {
                     //alert("Correct!!! qIndex:" + qIndex + 'questions[qIndex].correct_answer: ' + questions[qIndex].correct_answer)
                     //console.log(questions[qIndex].correct_answer + 'IS CORRECT!!!');
                     lastAnswerStatus = "Correct!"
+                    userScore += 1;
                 }
                 else {
                     console.log(index + '? YOU SUCK!!!');
@@ -315,12 +323,23 @@ $(document).ready(function () {
     savePlayerScorBtnElem.addEventListener("click", function (event) {
         event.preventDefault();
         console.log(savePlayerScorInputElem.value)
-        var new_tScore = { "name": savePlayerScorInputElem.value, "score": 100 };
+        var new_tScore = { "name": savePlayerScorInputElem.value, "score": userScore };
         highscores.push(new_tScore);
         console.log(highscores);
 
         localStorage.setItem("scores", JSON.stringify(highscores));
         renderScore();
+
+        showSaveFormBol = !showSaveFormBol;
+        if (showSaveFormBol) {
+            qaCard.classList.add("hide");
+            saveFormElem.classList.remove("hide");
+        }
+        else {
+            qaCard.classList.remove("hide");
+            saveFormElem.classList.add("hide");
+        }
+        renderStart();
     });
 
 });
